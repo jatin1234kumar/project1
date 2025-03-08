@@ -1,0 +1,99 @@
+:root {
+    --maincolor : #eee;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+/*********************** Navbar section starts here ***********************/
+
+.navbar {
+    padding: 0.6rem 7rem 0;
+}
+
+.navbar nav {
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/* nav 3 boxes starts */
+.navbar nav .nav3conts {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+}
+
+.navbar nav .nav3conts:first-child {
+    justify-content: flex-start;
+}
+
+.navbar nav .nav3conts:nth-child(2){
+    justify-content: space-between;
+    padding: 0 2rem;
+} 
+
+.navbar nav .nav3conts:last-child {
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+/* navbar inside 3 boxes */
+
+.navbar nav .nav3conts .logo .logoImage {
+    cursor: pointer;
+}
+
+.navbar nav .nav3conts .nav3ContLink{
+   font-size: 1rem;
+   color: var(--linkcolor);
+   cursor: pointer;
+   text-decoration: none;
+   position: relative;
+   letter-spacing: .5px;
+   font-weight: 400 !important;
+}
+
+.navbar nav .nav3conts .nav3ContLink::after{
+    display: flex;
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    width: 90%;
+    left: 5%;
+    height: 1.5px;
+    background-color: black;
+    opacity: 0;
+    transition : width .5s ease, opacity .5s ease, transform .5s ease;
+}
+
+.navbar nav .nav3conts .nav3ContLink:hover::after{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.linkedinLogo {
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.linkedinLogo:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/********************** Navbar section ends Here ***********************/
+
+
+
