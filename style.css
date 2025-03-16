@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 :root {
-    --maincolor : #eee;
+    --maincolor : linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
 }
 
 *,
@@ -12,13 +14,47 @@
 
 body {
     scroll-behavior: smooth;
-    font-family: sans-serif;
+    font-family: "Manrope", sans-serif;
+    background-color: #eee;
 }
 
 /*********************** Navbar section starts here ***********************/
 
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('assests/background.jpg') !important;
+    background-position: 0 -100px;
+    background-size: cover;
+}
+
 .navbar {
+    width: 100%;
     padding: 0.6rem 7rem 0;
+    transition: all .4s ease;
+    background: url('assests/background.jpg') !important;
+    background-position: 0 0;
+    background-size: cover !important;
+}
+
+.navbar.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0 7rem 0;
+    background: #eee !important;
+}
+
+.navbar.sticky .nav {
+    padding: .4rem;
+}
+
+.navbar.sticky .logoImage {
+    width: 175px;
+    height: 54px;
 }
 
 .navbar nav {
@@ -26,34 +62,37 @@ body {
     padding: .5rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /* nav 3 boxes starts */
 .navbar nav .nav3conts {
     display: flex;
     flex-direction: row;
-    flex: 1;
     align-items: center;
 }
 
-.navbar nav .nav3conts:first-child {
+.navbar nav .nav3conts:nth-child(1) {
     justify-content: flex-start;
 }
 
 .navbar nav .nav3conts:nth-child(2){
+    width: 25rem !important;
     justify-content: space-between;
     padding: 0 2rem;
 } 
 
-.navbar nav .nav3conts:last-child {
+.navbar nav .nav3conts:nth-child(3) {
     justify-content: flex-end;
     padding: 1rem;
 }
 
 /* navbar inside 3 boxes */
 
-.navbar nav .nav3conts .logo .logoImage {
+.logoImage {
     cursor: pointer;
+    width: 215px;
+    height: 65px;
 }
 
 .navbar nav .nav3conts .nav3ContLink{
@@ -70,11 +109,11 @@ body {
     display: flex;
     content: '';
     position: absolute;
-    bottom: -50%;
+    bottom: -60%;
     width: 90%;
     left: 5%;
     height: 1.5px;
-    background-color: black;
+    background-color: var(--main);black;
     opacity: 0;
     transition : width .5s ease, opacity .5s ease, transform .5s ease;
 }
@@ -95,5 +134,231 @@ body {
 
 /********************** Navbar section ends Here ***********************/
 
+.mainContentContainer {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    padding: 4rem 7rem 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
 
+.mainContentBox{
+    padding: 2rem 0 0;
+}
 
+.banner-text-img{
+    width: 45rem;
+    height: 6.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mainContentBox h1{
+    font-size: 2.4rem;
+    line-height: 1.3;
+    font-weight: 400 !important;
+}
+
+/* main content box button starts */
+
+.buttonBox{
+    padding: 0 7rem 0;
+    width: 100% !important;
+}
+
+.mainContentBoxBtn {
+   display: flex;
+   width: max-content;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: row;
+   transition: all .4s ease;
+}
+
+.mainContentBoxBtn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mainContentBoxBtn:hover .arrow-img{
+    transform: rotate(90deg);
+    border-color: #000;
+}
+
+.mainContentBoxBtn:hover a{
+    color: #000;
+}
+
+.mainContentBoxBtn .arrow-img {
+    border: 1px solid #333;
+    border-radius: 50%;
+    padding: 1.4rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    transform: rotate(45deg);
+    transition: all .4s ease;
+    margin-right: 1rem;
+}
+
+.mainContentBoxBtn a{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+}
+
+/************************ feature section starts ******************************/
+
+.feature {
+    padding: 10rem 7rem 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureBox {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.featureSmBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.featureImgBox img {
+    width: 100%;
+    transition: all .4s ease;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.featureImgBox:hover img {
+    opacity: .7;
+    padding: 2rem;
+}
+
+.featureContentBox{
+  padding: 0 2rem 0 2.5rem;
+}
+
+.featureContentBox .fContentBox{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.fContentBox span {
+    padding: 5px 15px;
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: .8rem;
+    color: #222;
+    margin-bottom: .8rem;
+}
+
+.fContentBoxLink {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    color: black;
+    margin-bottom: .8rem;
+}
+
+.fContentBoxLink:hover {
+    text-decoration: underline;
+}
+
+.fContentBox p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.featureBtnBox {
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    transition: all .4s ease;
+}
+
+.featureBtnBox:hover {
+    transform: scale(1.1);
+}
+
+.featureBtnBox a {
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 8px;
+    color: #000;
+}
+
+.featureBtnBox a:hover {
+    text-decoration: underline;
+}
+
+.featureBtnBox img {
+    width: 15px;
+    height: 15px;
+}
+
+/* animations */
+
+.show {
+    opacity: .4;
+    animation: zoom-out .8s ease forwards;
+}
+
+.zoomOut {
+    transform: scale(.4);
+    opacity: 0;
+    animation: zoom-out 2s ease forwards;
+}
+
+@keyframes zoom-out {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* footer section starts */
+
+footer {
+    padding: 0 7rem 0;
+    width: 100%;
+}
+
+footer .footerBox {
+    border-top: 3px solid black;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem .5rem;
+    justify-content: space-between;
+}
+
+.footerBox p {
+}
+
+.footerBox .linkedinLogo {
+    width: fit-content;
+    float: right;
+    text-align: right;
+}
