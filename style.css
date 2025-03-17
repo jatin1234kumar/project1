@@ -225,6 +225,7 @@ body {
     height: 30rem;
     display: flex;
     flex-direction: row;
+    
 }
 
 .featureSmBox {
@@ -320,14 +321,24 @@ body {
 /* animations */
 
 .show {
-    opacity: .4;
+    opacity: 0.2;
     animation: zoom-out .8s ease forwards;
+    animation-play-state: paused;
+}
+
+.featureBox.showAnimation .show {
+    animation-play-state: running;
 }
 
 .zoomOut {
     transform: scale(.4);
     opacity: 0;
     animation: zoom-out 2s ease forwards;
+    animation-play-state: paused;
+}
+
+.featureBox.showAnimation .zoomOut {
+    animation-play-state: running;
 }
 
 @keyframes zoom-out {
