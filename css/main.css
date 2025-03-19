@@ -18,6 +18,11 @@ body {
     background-color: #eee;
 }
 
+.js-loading *, .js-loading *:before, .js-loading *:after {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+
 /*********************** Navbar section starts here ***********************/
 
 .main {
@@ -26,7 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-image: url('assests/background.jpg') !important;
+    background-image: url('../assests/background.jpg') !important;
     background-position: 0 -100px;
     background-size: cover;
 }
@@ -35,7 +40,7 @@ body {
     width: 100%;
     padding: 0.6rem 7rem 0;
     transition: all .4s ease;
-    background: url('assests/background.jpg') !important;
+    background: url('../assests/background.jpg') !important;
     background-position: 0 0;
     background-size: cover !important;
 }
@@ -66,23 +71,23 @@ body {
 }
 
 /* nav 3 boxes starts */
-.navbar nav .nav3conts {
+.nav3conts {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.navbar nav .nav3conts:nth-child(1) {
+.nav3conts:nth-child(1) {
     justify-content: flex-start;
 }
 
-.navbar nav .nav3conts:nth-child(2){
+.nav3conts:nth-child(2){
     width: 25rem !important;
     justify-content: space-between;
     padding: 0 2rem;
 } 
 
-.navbar nav .nav3conts:nth-child(3) {
+.nav3conts:nth-child(3) {
     justify-content: flex-end;
     padding: 1rem;
 }
@@ -95,7 +100,7 @@ body {
     height: 65px;
 }
 
-.navbar nav .nav3conts .nav3ContLink{
+.nav3ContLink{
    font-size: 1rem;
    color: var(--linkcolor);
    cursor: pointer;
@@ -105,20 +110,21 @@ body {
    font-weight: 400 !important;
 }
 
-.navbar nav .nav3conts .nav3ContLink::after{
+.nav3ContLink::after{
     display: flex;
     content: '';
     position: absolute;
-    bottom: -60%;
+    bottom: -65%;
     width: 90%;
     left: 5%;
     height: 1.5px;
-    background-color: var(--main);black;
+    background-color: black;
     opacity: 0;
     transition : width .5s ease, opacity .5s ease, transform .5s ease;
 }
 
-.navbar nav .nav3conts .nav3ContLink:hover::after{
+.nav3ContLink.active::after,
+.nav3ContLink:hover::after{
     opacity: 1;
     transform: scale(1.2);
 }
@@ -133,6 +139,24 @@ body {
 }
 
 /********************** Navbar section ends Here ***********************/
+
+.insideMain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    opacity: 0;
+    transform: scale(.4) translateY(-5rem);
+    animation: emergeOut 1.2s ease forwards;
+}
+
+@keyframes emergeOut {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
 
 .mainContentContainer {
     width: 100%;

@@ -1,0 +1,203 @@
+.navbar.aboutNav {
+    background: #eee !important;
+}
+
+.about {
+    font-family: manro;
+    padding: 2rem 7rem 1rem;
+    width: 100%;
+}
+
+.aboutBox {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.aboutSmBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aboutSmBoxes:nth-child(1){
+    justify-content: flex-end;
+}
+
+.aboutSmBoxes h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 80%;
+}
+
+.aboutSmBoxes img {
+    width: 25rem;
+    height: 28rem;
+}
+
+/* resume section stats */
+
+.resume {
+    padding: 0 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 2rem;
+    font-family: "Manrope", sans-serif;
+}
+
+.resumeSmBox {
+    padding: 1rem;
+}
+
+.resumeSmBox:first-child {
+    text-align: right;
+}
+
+.resumeHeading {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 1rem;
+}
+
+.resumeSmBox:last-child {
+    padding-right: 2rem;
+}
+
+.resumeSmBox:last-child p {
+    font-size: 1rem;
+    color: grey;
+}
+
+/* second resume box */
+
+.resume:last-child{
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+
+.resume:last-child .resumeSmBox {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+
+.resume:last-child .resumeSmBox h2 {
+    flex: 1;
+}
+
+.resume:last-child .resumeSmBox ul {
+    flex: 1;
+    padding: 0 0 0 1rem;
+}
+
+
+.resume:last-child ul li{
+    list-style-type: none;
+    color: grey;
+    font-size: 1rem;
+}
+
+/* education section */
+.resumeEducation {
+    padding: 0 7rem 0;
+    width: 100%;
+}
+
+.resumeEducationBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 2rem;
+    padding: 0 3rem;
+}
+
+.resumeEducationBox h2 {
+    text-align: right;
+}
+
+.resumeEducationBox table tr{
+}
+
+.resumeEducationBox table tr td{
+    padding: 1rem;
+    border-bottom: 1px solid #dbd9d9;
+    color: gray;
+}
+
+.buttonColumn{
+    border: none !important;
+}
+
+.resumeEducationBox table tr td:nth-child(2){
+    text-align: right;
+}
+
+.resumeBtn {
+    padding: .8rem 1.8rem;
+    color: #eee;
+    border: 1px solid black;
+    background-color: black;
+    width: fit-content;
+    outline: none;
+    cursor: pointer;
+    transform: none;
+    transition: transform .8s ease;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.resumeBtn:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: #eee;
+}
+
+/* contactBtn section starts */
+
+.contactBtnSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 7rem;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    background: url('../assests/contactBackground.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.contactBtnSection p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.contactBtnSection img {
+    width: 25rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.contactBtnSection button {
+    background-color: transparent;
+    color: black;
+}
+
+.contactBtnSection button:hover {
+    background-color: black;
+    color: #eee;
+}

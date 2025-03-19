@@ -1,0 +1,13 @@
+@keyframes emergeOut {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes zoom-out {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}

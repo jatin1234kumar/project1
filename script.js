@@ -1,14 +1,33 @@
+// normal decelerations.
 const navbar = document.getElementById("Navbar");
+const featureBoxs = document.querySelectorAll(".featureBox");
 
-window.addEventListener("scroll", () => {
+// declared functions
+function showNavbar() {
   if (window.scrollY >= 50) {
     navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+// Prepare the body tag by adding a "js-paused" class
+document.body.className += " js-loading";
+
+window.addEventListener("load", showPage, false);
+
+function showPage() {
+  document.body.className = document.body.className.replace("js-loading", "");
+}
+
+// show navbar only when the page is scrolled down by 50px;
+window.addEventListener("scroll", () => {
+  showNavbar();
 });
 
-const featureBoxs = document.querySelectorAll(".featureBox");
+showNavbar();
+
+// this is to show animtion when the user reaches the projects parts
 
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 559 && window.scrollY < 1039) {
