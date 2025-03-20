@@ -11,3 +11,9 @@
         transform: none;
     }
 }
+
+@keyframes fadeOut {
+    100% {
+        opacity: 1;
+    }
+}

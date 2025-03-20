@@ -151,13 +151,6 @@ body {
     animation: emergeOut 1.2s ease forwards;
 }
 
-@keyframes emergeOut {
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
 .mainContentContainer {
     width: 100%;
     height: auto;
@@ -365,12 +358,6 @@ body {
     animation-play-state: running;
 }
 
-@keyframes zoom-out {
-    100%{
-        opacity: 1;
-        transform: none;
-    }
-}
 
 /* footer section starts */
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Naomi Creates</title>
+    <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/about.css" />
   </head>
@@ -49,10 +50,10 @@
       </div>
 
       <div class="resume">
-        <div class="resumeSmBox">
+        <div class="resumeSmBox animate">
           <h2 class="resumeHeading">Bio</h2>
         </div>
-        <div class="resumeSmBox">
+        <div class="resumeSmBox animate">
           <p>
             Starting out in graphic design, I always had a passion for creating
             visually appealing work. But I wanted more than just aesthetics—I
@@ -70,7 +71,7 @@
         </div>
       </div>
       <div class="resume">
-        <div class="resumeSmBox">
+        <div class="resumeSmBox animate">
           <h2 class="resumeHeading" style="text-align: right">Skills</h2>
           <ul style="text-align: left">
             <li>Visual Design & Branding</li>
@@ -83,7 +84,7 @@
             <li>User Flows</li>
           </ul>
         </div>
-        <div class="resumeSmBox">
+        <div class="resumeSmBox animate">
           <h2 class="resumeHeading" style="text-align: right">Design Tools</h2>
           <ul style="text-align: right">
             <li>Figma</li>
@@ -96,7 +97,7 @@
     </section>
 
     <div class="resumeEducation">
-      <div class="resumeEducationBox">
+      <div class="resumeEducationBox animate">
         <h2 class="resumeHeading" style="padding-top: 1rem">Education</h2>
         <table>
           <tr>
@@ -117,7 +118,7 @@
           </tr>
 
           <tr>
-            <td class="buttonColumn">
+            <td class="buttonColumn animate">
               <button class="resumeBtn">Request Resume</button>
             </td>
           </tr>
@@ -125,10 +126,10 @@
       </div>
     </div>
 
-    <div class="contactBtnSection">
+    <div class="contactBtnSection animate">
       <p>Let's Chat?</p>
-      <img src="assests/get-in-touch.png" />
-      <button class="resumeBtn">Email me</button>
+      <img src="assests/get-in-touch.png" class="animate" />
+      <button class="resumeBtn animate">Email me</button>
     </div>
 
     <footer>
@@ -146,6 +147,40 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      const navbar = document.getElementById("Navbar");
+      function showNavbar() {
+        if (window.scrollY >= 50) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+      // show navbar only when the page is scrolled down by 50px;
+      window.addEventListener("scroll", () => {
+        showNavbar();
+      });
+
+      showNavbar();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".animate");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Add animation
+                observer.unobserve(entry.target); // Stop observing to prevent re-triggering
+              }
+            });
+          },
+          { threshold: 0.4 }
+        ); // Trigger when 40% of the element is visible
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
   </body>
 </html>

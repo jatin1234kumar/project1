@@ -4,7 +4,7 @@
 
 .about {
     font-family: manro;
-    padding: 2rem 7rem 1rem;
+    padding: 4rem 0 1rem;
     width: 100%;
 }
 
@@ -12,7 +12,9 @@
     font-family: "Manrope", sans-serif;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 70rem;
+    margin: auto;
     padding: 0 2rem;
 }
 
@@ -27,6 +29,10 @@
 
 .aboutSmBoxes:nth-child(1){
     justify-content: flex-end;
+    opacity: 0;
+    transform: scale(.2);
+    transition: all .4s ease;
+    animation: emergeOut 1.5s ease forwards;
 }
 
 .aboutSmBoxes h1 {
@@ -38,13 +44,18 @@
 .aboutSmBoxes img {
     width: 25rem;
     height: 28rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all .4s ease;
+    animation: emergeOut .4s ease forwards;
 }
 
 /* resume section stats */
 
 .resume {
     padding: 0 2rem;
-    width: 100%;
+    width: 70rem;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
@@ -53,7 +64,13 @@
 
 .resumeSmBox {
     padding: 1rem;
+    opacity: 0;
 }
+
+.resumeSmBox.animate.visible{
+    animation: fadeOut 1.5s ease forwards;
+}
+
 
 .resumeSmBox:first-child {
     text-align: right;
@@ -82,7 +99,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 0;
 }
-
 
 .resume:last-child .resumeSmBox {
     display: flex;
@@ -119,13 +135,15 @@
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
     padding: 0 3rem;
+    opacity: 0;
+}
+
+.resumeEducationBox.animate.visible {
+    animation: fadeOut 1.5s ease forwards;
 }
 
 .resumeEducationBox h2 {
     text-align: right;
-}
-
-.resumeEducationBox table tr{
 }
 
 .resumeEducationBox table tr td{
@@ -136,6 +154,12 @@
 
 .buttonColumn{
     border: none !important;
+    transform: scale(0.2);
+    opacity: 0;
+}
+
+.buttonColumn.animate.visible {
+    animation: emergeOut 1s ease forwards;
 }
 
 .resumeEducationBox table tr td:nth-child(2){
@@ -176,6 +200,12 @@
     background: url('../assests/contactBackground.png');
     background-size: contain;
     background-position: center;
+    opacity: 0;
+    transform: scale(.2);
+}
+
+.contactBtnSection.animate.visible {
+    animation: emergeOut 1.5s ease forwards;
 }
 
 .contactBtnSection p{
