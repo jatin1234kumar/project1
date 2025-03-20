@@ -278,13 +278,15 @@ body {
     flex-direction: column;
 }
 
-.fContentBox span {
+.ProjectUpperHeading {
     padding: 5px 15px;
     border: 1px solid #222;
     border-radius: 20px;
     font-size: .8rem;
+    font-weight: 500;
     color: #222;
     margin-bottom: .8rem;
+    width: fit-content;
 }
 
 .fContentBoxLink {

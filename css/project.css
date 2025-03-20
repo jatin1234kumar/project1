@@ -1,0 +1,39 @@
+.project {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.ProjectBox {
+    width: 67rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.projectSmBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    gap: 2rem;
+}
+
+.projectExSmBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.projectImg {
+    height: 391px;
+   aspect-ratio: 2/1.5;
+}
