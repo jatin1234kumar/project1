@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Naomi Creates</title>
+    <title>Project - Naomi Creates</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/animation.css" />
   </head>
   <body>
     <!-- Navbar section starts -->
-    <div class="navbar aboutNav" id="Navbar">
+    <div class="navbar" id="Navbar">
       <nav>
         <div class="nav3conts">
           <a href="/index.html" class="logo">
             <img src="assests/logo.png" alt="logo" class="logoImage" />
           </a>
         </div>
-        <div class="nav3conts">
+        <div class="nav3conts navLinkBox">
           <a href="/about.html" class="nav3ContLink">About me</a>
           <a href="/project.html" class="nav3ContLink active">Projects</a>
           <a href="/" class="nav3ContLink">Contact</a>
+        </div>
+        <div class="nav3conts HamburgerBox">
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
         <div class="nav3conts">
           <img
@@ -35,19 +42,18 @@
     </div>
 
     <!-- project section -->
-
-    <section class="project">
-      <!-- feature box 1 -->
-      <div class="ProjectBox">
+    <section class="project" id="project">
+      <!-- Project box 1 -->
+      <div class="ProjectBox ProjectSection">
         <div class="projectSmBox">
-          <div class="projectExSmBox" style="order: 1">
+          <div class="projectExSmBox animate" style="order: 1">
             <img
               src="./assests/featureImg1.jpeg"
               class="projectImg"
               alt="Project Image 1"
             />
           </div>
-          <div class="projectExSmBox" style="order: 2">
+          <div class="projectExSmBox animate" style="order: 2">
             <div class="fContentBox">
               <h3 class="ProjectUpperHeading">END-TO-END APPLICATION</h3>
               <a href="/" class="fContentBoxLink"
@@ -58,23 +64,26 @@
                 Creating a Natural Hair app that helps users document, manage,
                 track, and celebrate their natural hair journey.
               </p>
-              <div class="featureBtnBox">
-                <a href="/" class="">View Case Study</a>
-                <img src="./assests/right-arrow-thick.png" class="" />
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
               </div>
             </div>
           </div>
         </div>
-        <!-- second Box -->
+
         <div class="projectSmBox">
-          <div class="projectExSmBox" style="order: 1">
+          <div class="projectExSmBox animate" style="order: 1">
             <img
               src="./assests/featureImg2.jpeg"
               class="projectImg"
               alt="Project Image 2"
             />
           </div>
-          <div class="projectExSmBox" style="order: 2">
+          <div class="projectExSmBox animate order2" style="order: 2">
             <div class="fContentBox">
               <h3 class="ProjectUpperHeading">
                 ADDING A FEATURE TO AN APPLICATION
@@ -87,9 +96,12 @@
                 at a later time or date, providing more flexibility and
                 convenience in communication.
               </p>
-              <div class="featureBtnBox">
-                <a href="/" class="">View Case Study</a>
-                <img src="./assests/right-arrow-thick.png" class="" />
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
               </div>
             </div>
           </div>
@@ -97,16 +109,16 @@
       </div>
 
       <!-- Second Project Box -->
-      <div class="ProjectBox">
+      <div class="ProjectBox ProjectSection">
         <div class="projectSmBox">
-          <div class="projectExSmBox" style="order: 1">
+          <div class="projectExSmBox animate" style="order: 1">
             <img
               src="./assests/featureImg3.jpeg"
               class="projectImg"
               alt="Project Image 3"
             />
           </div>
-          <div class="projectExSmBox" style="order: 2">
+          <div class="projectExSmBox animate" style="order: 2">
             <div class="fContentBox">
               <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
               <a href="/" class="fContentBoxLink"
@@ -117,23 +129,26 @@
                 will enable Oratile Kids to reach their customers directly,
                 broaden their market reach, and reduce the expenses
               </p>
-              <div class="featureBtnBox">
-                <a href="/" class="">View Case Study</a>
-                <img src="./assests/right-arrow-thick.png" class="" />
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
               </div>
             </div>
           </div>
         </div>
 
         <div class="projectSmBox">
-          <div class="projectExSmBox" style="order: 1">
+          <div class="projectExSmBox animate" style="order: 1">
             <img
               src="./assests/featureImg4.jpeg"
               class="projectImg"
               alt="Project Image 4"
             />
           </div>
-          <div class="projectExSmBox" style="order: 2">
+          <div class="projectExSmBox animate" style="order: 2">
             <div class="fContentBox">
               <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
               <a href="/" class="fContentBoxLink"
@@ -144,9 +159,12 @@
                 Community sharing of pre-loved goods that contributes to a more
                 sustainable, connected, and inclusive society
               </p>
-              <div class="featureBtnBox">
-                <a href="/" class="">View Case Study</a>
-                <img src="./assests/right-arrow-thick.png" class="" />
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
               </div>
             </div>
           </div>

@@ -9,17 +9,24 @@
   </head>
   <body>
     <!-- Navbar section starts -->
-    <div class="navbar" id="Navbar">
+    <div class="navbar indexPage" id="Navbar">
       <nav>
         <div class="nav3conts">
           <a href="/index.html" class="logo">
             <img src="assests/logo.png" alt="logo" class="logoImage" />
           </a>
         </div>
-        <div class="nav3conts">
+        <div class="nav3conts navLinkBox">
           <a href="/about.html" class="nav3ContLink">About me</a>
           <a href="/project.html" class="nav3ContLink">Projects</a>
           <a href="/" class="nav3ContLink">Contact</a>
+        </div>
+        <div class="nav3conts HamburgerBox">
+          <div class="hamburger" onclick="toggleMenu(this)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
         <div class="nav3conts">
           <img
@@ -53,110 +60,145 @@
               class="arrow-img"
               alt="arrow"
             />
-            <a href="#">view projects</a>
+            <a href="#project">view projects</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- feature section starts -->
+    <!-- Project section starts -->
 
-    <section class="feature" id="feature">
-      <!-- feature box 1 -->
-      <div class="featureBox">
-        <div class="featureSmBox featureImgBox zoomOut" style="order: 1">
-          <img src="assests/featureImg1.jpeg" alt="featureimage1" />
+    <section class="project index" id="project">
+      <!-- Project box 1 -->
+      <div class="ProjectBox">
+        <div class="projectSmBox">
+          <div class="projectExSmBox animate" style="order: 1">
+            <img
+              src="./assests/featureImg1.jpeg"
+              class="projectImg"
+              alt="Project Image 1"
+            />
+          </div>
+          <div class="projectExSmBox animate" style="order: 2">
+            <div class="fContentBox">
+              <h3 class="ProjectUpperHeading">END-TO-END APPLICATION</h3>
+              <a href="/" class="fContentBoxLink"
+                >Empowering Natural Hair Journeys with a Personalised Diary
+                App</a
+              >
+              <p class="show">
+                Creating a Natural Hair app that helps users document, manage,
+                track, and celebrate their natural hair journey.
+              </p>
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="featureSmBox featureContentBox" style="order: 2">
-          <div class="fContentBox">
-            <h3 class="ProjectUpperHeading">END-TO-END APPLICATION</h3>
-            <a href="/" class="fContentBoxLink"
-              >Empowering Natural Hair Journeys with a Personalised Diary App</a
-            >
-            <p class="show">
-              Creating a Natural Hair app that helps users document, manage,
-              track, and celebrate their natural hair journey.
-            </p>
-            <div class="featureBtnBox">
-              <a href="/" class="">View Case Study</a>
-              <img src="assests/right-arrow-thick.png" class="" />
+
+        <div class="projectSmBox">
+          <div class="projectExSmBox animate order2" style="order: 2">
+            <img
+              src="./assests/featureImg2.jpeg"
+              class="projectImg"
+              alt="Project Image 2"
+            />
+          </div>
+          <div class="projectExSmBox animate order1" style="order: 1">
+            <div class="fContentBox">
+              <h3 class="ProjectUpperHeading">
+                ADDING A FEATURE TO AN APPLICATION
+              </h3>
+              <a href="/" class="fContentBoxLink"
+                >Adding a Message Scheduling Feature to WhatsApp Messenger</a
+              >
+              <p class="show">
+                This feature will enable users to schedule messages to be sent
+                at a later time or date, providing more flexibility and
+                convenience in communication.
+              </p>
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- feature box 2 -->
-      <div class="featureBox">
-        <div class="featureSmBox featureImgBox zoomOut" style="order: 2">
-          <img src="assests/featureImg2.jpeg" alt="featureimage1" />
-        </div>
-        <div class="featureSmBox featureContentBox" style="order: 1">
-          <div class="fContentBox">
-            <h3 class="ProjectUpperHeading">
-              ADDING A FEATURE TO AN APPLICATION
-            </h3>
-            <a href="/" class="fContentBoxLink"
-              >Adding a Message Scheduling Feature to WhatsApp Messenger</a
-            >
-            <p class="show">
-              This feature will enable users to schedule messages to be sent at
-              a later time or date, providing more flexibility and convenience
-              in communication.
-            </p>
-            <div class="featureBtnBox">
-              <a href="/" class="zoomOut">View Case Study</a>
-              <img src="assests/right-arrow-thick.png" class="zoomOut" />
+
+      <!-- Second Project Box -->
+      <div class="ProjectBox">
+        <div class="projectSmBox">
+          <div class="projectExSmBox animate" style="order: 1">
+            <img
+              src="./assests/featureImg3.jpeg"
+              class="projectImg"
+              alt="Project Image 3"
+            />
+          </div>
+          <div class="projectExSmBox animate" style="order: 2">
+            <div class="fContentBox">
+              <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
+              <a href="/" class="fContentBoxLink"
+                >Building an Online Presence for a Local Baby Shoe Brand</a
+              >
+              <p class="show">
+                Designing a responsive website with eCommerce functionality that
+                will enable Oratile Kids to reach their customers directly,
+                broaden their market reach, and reduce the expenses
+              </p>
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- feature box 3 -->
-      <div class="featureBox">
-        <div class="featureSmBox featureImgBox zoomOut" style="order: 1">
-          <img src="assests/featureImg3.jpeg" alt="featureimage1" />
-        </div>
-        <div class="featureSmBox featureContentBox" style="order: 2">
-          <div class="fContentBox">
-            <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
-            <a href="/" class="fContentBoxLink"
-              >Building an Online Presence for a Local Baby Shoe Brand</a
-            >
-            <p class="show">
-              Designing a responsive website with eCommerce functionality that
-              will enable Oratile Kids to reach their customers directly,
-              broaden their market reach, and reduce the expenses
-            </p>
-            <div class="featureBtnBox">
-              <a href="/" class="zoomOut">View Case Study</a>
-              <img src="assests/right-arrow-thick.png" class="zoomOut" />
-            </div>
+
+        <div class="projectSmBox">
+          <div class="projectExSmBox animate order2" style="order: 2">
+            <img
+              src="./assests/featureImg4.jpeg"
+              class="projectImg"
+              alt="Project Image 4"
+            />
           </div>
-        </div>
-      </div>
-      <!-- feature box 4 -->
-      <div class="featureBox">
-        <div class="featureSmBox featureImgBox zoomOut" style="order: 2">
-          <img src="assests/featureImg4.jpeg" alt="featureimage1" />
-        </div>
-        <div class="featureSmBox featureContentBox" style="order: 1">
-          <div class="fContentBox">
-            <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
-            <a href="/" class="fContentBoxLink"
-              >Declutter with Purpose: Sustainable Giving Through a Responsive
-              Donation Platform</a
-            >
-            <p class="show">
-              Community sharing of pre-loved goods that contributes to a more
-              sustainable, connected, and inclusive society
-            </p>
-            <div class="featureBtnBox">
-              <a href="/" class="zoomOut">View Case Study</a>
-              <img src="assests/right-arrow-thick.png" class="zoomOut" />
+          <div class="projectExSmBox animate order1" style="order: 1">
+            <div class="fContentBox">
+              <h3 class="ProjectUpperHeading">RESPONSIVE WEBSITE</h3>
+              <a href="/" class="fContentBoxLink"
+                >Declutter with Purpose: Sustainable Giving Through a Responsive
+                Donation Platform</a
+              >
+              <p class="show">
+                Community sharing of pre-loved goods that contributes to a more
+                sustainable, connected, and inclusive society
+              </p>
+              <div class="projectBtnBox">
+                <a href="/" class="projectBtn">View Case Study</a>
+                <img
+                  src="./assests/right-arrow-thick.png"
+                  class="btnArrowImg"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- footer section starts -->
     <footer>
       <div class="footerBox">
         <p>

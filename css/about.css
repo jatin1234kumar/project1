@@ -1,7 +1,3 @@
-.navbar.aboutNav {
-    background: #eee !important;
-}
-
 .about {
     font-family: manro;
     padding: 4rem 0 1rem;
@@ -13,9 +9,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70rem;
+    width: 65rem;
     margin: auto;
-    padding: 0 2rem;
 }
 
 .aboutSmBoxes {
@@ -31,8 +26,8 @@
     justify-content: flex-end;
     opacity: 0;
     transform: scale(.2);
-    transition: all .4s ease;
-    animation: emergeOut 1.5s ease forwards;
+    transition: var(--transitionsSlow);
+    animation: var(--zoomOutAnimation);
 }
 
 .aboutSmBoxes h1 {
@@ -41,20 +36,20 @@
     width: 80%;
 }
 
-.aboutSmBoxes img {
+.aboutSmBoxes .aboutImg {
     width: 25rem;
     height: 28rem;
     opacity: 0;
     transform: translateY(1rem);
-    transition: all .4s ease;
-    animation: emergeOut .4s ease forwards;
+    transition: var(--transitionsSlow);
+    animation: var(--zoomOutSlowAnimation);
 }
 
 /* resume section stats */
 
 .resume {
-    padding: 0 2rem;
-    width: 70rem;
+    padding-right: 2rem;
+    width: 65rem;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -68,7 +63,7 @@
 }
 
 .resumeSmBox.animate.visible{
-    animation: fadeOut 1.5s ease forwards;
+    animation: var(--fadeOutAnimaton);
 }
 
 
@@ -78,7 +73,7 @@
 
 .resumeHeading {
   font-size: 1.2rem;
-  color: black;
+  color: var(--deepBlack);
   font-weight: 400;
   text-transform: uppercase;
   padding: 0 1rem;
@@ -90,7 +85,7 @@
 
 .resumeSmBox:last-child p {
     font-size: 1rem;
-    color: grey;
+    color: var(--grayColor);
 }
 
 /* second resume box */
@@ -109,24 +104,26 @@
 
 .resume:last-child .resumeSmBox h2 {
     flex: 1;
+    min-width: 0;
 }
 
 .resume:last-child .resumeSmBox ul {
     flex: 1;
     padding: 0 0 0 1rem;
+    min-width: auto;
 }
 
 
 .resume:last-child ul li{
     list-style-type: none;
-    color: grey;
+    color: var(--grayColor);
     font-size: 1rem;
 }
 
 /* education section */
 .resumeEducation {
-    padding: 0 7rem 0;
-    width: 100%;
+    width: 65rem;
+    margin: auto;
 }
 
 .resumeEducationBox{
@@ -134,12 +131,12 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
-    padding: 0 3rem;
+    padding-right: 3rem;
     opacity: 0;
 }
 
 .resumeEducationBox.animate.visible {
-    animation: fadeOut 1.5s ease forwards;
+    animation: var(--fadeOutAnimaton);
 }
 
 .resumeEducationBox h2 {
@@ -149,7 +146,7 @@
 .resumeEducationBox table tr td{
     padding: 1rem;
     border-bottom: 1px solid #dbd9d9;
-    color: gray;
+    color: var(--grayColor);
 }
 
 .buttonColumn{
@@ -159,7 +156,7 @@
 }
 
 .buttonColumn.animate.visible {
-    animation: emergeOut 1s ease forwards;
+    animation: var(--zoomOutAnimation);
 }
 
 .resumeEducationBox table tr td:nth-child(2){
@@ -168,22 +165,22 @@
 
 .resumeBtn {
     padding: .8rem 1.8rem;
-    color: #eee;
-    border: 1px solid black;
-    background-color: black;
+    color: var(--mainBodyColor);
+    border: 1px solid var(--deepBlack);
+    background-color: var(--deepBlack);
     width: fit-content;
     outline: none;
     cursor: pointer;
     transform: none;
-    transition: transform .8s ease;
+    transition: var(--transitionsSlow);
     border-radius: 50px;
     font-size: 1rem;
 }
 
 .resumeBtn:hover {
     transform: scale(1.1);
-    color: black;
-    background-color: #eee;
+    color: var(--deepBlack);
+    background-color: var(--mainBodyColor);
 }
 
 /* contactBtn section starts */
@@ -199,19 +196,20 @@
     margin-top: 1rem;
     background: url('../assests/contactBackground.png');
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
     transform: scale(.2);
 }
 
 .contactBtnSection.animate.visible {
-    animation: emergeOut 1.5s ease forwards;
+    animation: var(--zoomOutAnimation);
 }
 
 .contactBtnSection p{
     font-size: 1rem;
     letter-spacing: 1px;
-    color: black;
+    color: var(--deepBlack);
     font-weight: 500;
     margin-bottom: 2rem;
 }
@@ -224,10 +222,167 @@
 
 .contactBtnSection button {
     background-color: transparent;
-    color: black;
+    color: var(--deepBlack);
 }
 
 .contactBtnSection button:hover {
-    background-color: black;
-    color: #eee;
+    background-color: var(--deepBlack);
+    color: var(--mainBodyColor);
 }
+
+
+
+@media only screen and (max-width: 1120px)  {
+/* about section */
+.aboutBox {
+    width: 60rem;
+}
+
+.aboutSmBoxes h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 90%;
+}
+
+.resume {
+    width: 60rem;
+}
+
+.resumeEducation {
+    width: 60rem;
+}
+
+
+}
+@media only screen and (max-width: 920px)  {
+    /* about section */
+.aboutBox {
+    width: 50rem;
+}
+
+.aboutSmBoxes h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    width: 85%;
+}
+
+.resume {
+    width: 50rem;
+    gap: 0;
+}
+
+.resumeEducation {
+    width: 50rem;
+}
+
+.resume:last-child{
+    padding-right: 4rem;
+}
+
+.resume:last-child .resumeSmBox{
+    padding: 0;
+    gap: 0;
+}
+
+.resumeEducation {
+    width: 55rem;
+   
+}
+
+.resumeEducationBox{
+    gap: 0;
+    padding-right: 4rem;
+}
+
+.leftUl {
+    text-align: left !important;
+}
+
+}
+@media only screen and (max-width: 820px)  {
+.aboutBox {
+    flex-direction: column;
+    width: 100%;
+}
+
+.aboutSmBoxes h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* resume section */
+.resume {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: none;
+    padding-right: 0;
+    width: 100%;
+}
+
+.resume .resumeSmBox:first-child{
+    min-width: 0;
+}
+
+.resume .resumeSmBox:first-child{
+    min-width: auto;
+}
+
+.resumeHeadingBox1{
+    padding: 0 1rem !important;
+}
+
+.resume:last-child {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    padding-right: 0;
+}
+
+.resume:last-child .resumeSmBox {
+    padding: 1rem;
+    width: 100%;
+    /* text-align: left; */
+}
+
+.resumeSmBox:last-child {
+    padding-right: 1rem;
+}
+
+.resumeHeading{
+    text-align: left !important;
+    padding: 0;
+}
+
+.leftUl {
+    text-align: right !important;
+}
+
+.resumeEducation {
+    width: 100%;
+}
+
+.resumeEducationBox {
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr;
+    padding: 1rem;
+}
+
+.resumeEducationBox table tr td {
+    padding: 1rem 0;
+}
+
+.requestResumeBtn{
+    padding: .8rem 1.2rem;
+    font-size: 0.8rem;
+}
+
+/* contact section */
+
+.contactBtnSection {
+    background-size: cover;
+}
+
+
+}
+@media only screen and (max-width: 640px)  {}

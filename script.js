@@ -13,9 +13,7 @@ function showNavbar() {
 
 // Prepare the body tag by adding a "js-paused" class
 document.body.className += " js-loading";
-
 window.addEventListener("load", showPage, false);
-
 function showPage() {
   document.body.className = document.body.className.replace("js-loading", "");
 }
@@ -24,23 +22,39 @@ function showPage() {
 window.addEventListener("scroll", () => {
   showNavbar();
 });
+showNavbar();
+
+// This is to show eliment once when scrolled
+
+// show navbar only when the page is scrolled down by 50px;
+window.addEventListener("scroll", () => {
+  showNavbar();
+});
 
 showNavbar();
 
-// this is to show animtion when the user reaches the projects parts
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 559 && window.scrollY < 1039) {
-    showAnimation(0);
-  } else if (window.scrollY >= 1039 && window.scrollY < 1519) {
-    showAnimation(1);
-  } else if (window.scrollY >= 1519 && window.scrollY < 1999) {
-    showAnimation(2);
-  } else if (window.scrollY >= 1999) {
-    showAnimation(3);
-  }
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add animation
+          observer.unobserve(entry.target); // Stop observing to prevent re-triggering
+        }
+      });
+    },
+    { threshold: 0.4 }
+  ); // Trigger when 40% of the element is visible
 
-  function showAnimation(value) {
-    featureBoxs[value].classList.add("showAnimation");
-  }
+  elements.forEach((el) => observer.observe(el));
 });
+
+// hamburger menu
+
+const nav = document.querySelector("nav");
+function toggleMenu(element) {
+  element.classList.toggle("open");
+  nav.classList.toggle("showMenu");
+}
